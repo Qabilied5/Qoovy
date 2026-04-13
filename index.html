@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qoovy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">Qoo<span>v</span>y</div>
+
+    <span class="nav-label">Menu</span>
+    <a class="nav-item active" href="#">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+      Home
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Search
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      Favorites
+    </a>
+
+    <span class="nav-label">Library</span>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      My Playlist
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Albums
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      Artists
+    </a>
+
+    <span class="nav-label">System</span>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+      Settings
+    </a>
+
+    <div class="sidebar-footer">
+      <div class="user-pill">
+        <div class="user-avatar">QV</div>
+        <div class="user-info">
+          <div class="name">Qoovy User</div>
+          <div class="plan">Developer</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" placeholder="Search songs, artists, albums...">
+      </div>
+      <div class="topbar-actions">
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        </div>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL AREA -->
+    <div class="scroll-area">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-art">
+          <div class="spin-bars">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="hero-info">
+          <div class="hero-tag">Now Trending</div>
+          <div class="hero-title">Midnight Reverie</div>
+          <div class="hero-subtitle">Your curated evening session is ready</div>
+          <button class="hero-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Play Now
+          </button>
+        </div>
+      </div>
+
+      <!-- FREQUENTLY PLAYED -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-title">Frequently Played</div>
+          <a class="section-more" href="#">See all</a>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="cover cover-1">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Golden Hour</div>
+            <div class="card-artist">JVKE</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-2">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Blinding Lights</div>
+            <div class="card-artist">The Weeknd</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-3">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Levitating</div>
+            <div class="card-artist">Dua Lipa</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-4">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Starboy</div>
+            <div class="card-artist">The Weeknd</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-5">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">As It Was</div>
+            <div class="card-artist">Harry Styles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECOMMENDED -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-title">Recommended For You</div>
+          <a class="section-more" href="#">See all</a>
+        </div>
+        <div class="track-list">
+          <div class="track-item">
+            <div class="track-num">1</div>
+            <div class="track-play-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <div class="track-art cover-6"></div>
+            <div class="track-info">
+              <div class="track-name">Midnight Rain</div>
+              <div class="track-artist-name">Taylor Swift</div>
+            </div>
+            <div class="track-heart"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="track-duration">3:42</div>
+          </div>
+          <div class="track-item">
+            <div class="track-num">2</div>
+            <div class="track-play-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <div class="track-art cover-7"></div>
+            <div class="track-info">
+              <div class="track-name">Heat Waves</div>
+              <div class="track-artist-name">Glass Animals</div>
+            </div>
+            <div class="track-heart"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="track-duration">3:58</div>
+          </div>
+          <div class="track-item">
+            <div class="track-num">3</div>
+            <div class="track-play-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <div class="track-art cover-8"></div>
+            <div class="track-info">
+              <div class="track-name">Industry Baby</div>
+              <div class="track-artist-name">Lil Nas X</div>
+            </div>
+            <div class="track-heart"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="track-duration">3:32</div>
+          </div>
+          <div class="track-item">
+            <div class="track-num">4</div>
+            <div class="track-play-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <div class="track-art cover-1"></div>
+            <div class="track-info">
+              <div class="track-name">Stay</div>
+              <div class="track-artist-name">The Kid LAROI</div>
+            </div>
+            <div class="track-heart"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="track-duration">2:21</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAYLISTS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-title">Your Playlists</div>
+          <a class="section-more" href="#">Create new</a>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="cover cover-3">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Late Night Drives</div>
+            <div class="card-artist">24 songs</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-7">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Focus Mode</div>
+            <div class="card-artist">18 songs</div>
+          </div>
+          <div class="card">
+            <div class="cover cover-2">
+              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="card-title">Chill Vibes</div>
+            <div class="card-artist">31 songs</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /scroll-area -->
+  </main>
+
+</div><!-- /app -->
+
+<!-- PLAYER BAR -->
+<div class="player">
+  <!-- Now Playing -->
+  <div class="now-playing">
+    <div class="np-art">
+      <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    </div>
+    <div class="np-info">
+      <div class="np-title">Golden Hour</div>
+      <div class="np-artist">JVKE</div>
+    </div>
+    <div class="np-heart">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    </div>
+  </div>
+
+  <!-- Center -->
+  <div class="player-center">
+    <div class="controls">
+      <button class="ctrl-btn">
+        <svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+      </button>
+      <button class="ctrl-btn">
+        <svg viewBox="0 0 24 24"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
+      </button>
+      <button class="ctrl-btn play-main">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+      <button class="ctrl-btn">
+        <svg viewBox="0 0 24 24"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+      </button>
+      <button class="ctrl-btn">
+        <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+      </button>
+    </div>
+    <div class="progress-row">
+      <span class="progress-time">1:26</span>
+      <div class="progress-bar"></div>
+      <span class="progress-time" style="text-align:right">3:48</span>
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div class="player-right">
+    <button class="ctrl-btn">
+      <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+    </button>
+    <div class="vol-bar"></div>
+    <button class="ctrl-btn">
+      <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+
+</body>
+</html>
