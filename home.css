@@ -534,11 +534,13 @@
   }
 
   .now-playing {
+    max-width: 400px;
     display: flex;
     align-items: center;
     gap: 12px;
-    min-width: 220px;
+    min-width: 400px;
   }
+
   .np-art {
     width: 48px; height: 48px;
     border-radius: 10px;
@@ -564,6 +566,8 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    max-width: 400px;
+    margin-left: auto;
   }
   .controls {
     display: flex;
@@ -602,7 +606,7 @@
     align-items: center;
     gap: 10px;
     width: 100%;
-    max-width: 460px;
+    max-width: 350px;
   }
   .progress-time { font-size: 11px; color: var(--text-muted); font-feature-settings: 'tnum'; width: 32px; }
   .progress-bar {
@@ -613,7 +617,7 @@
     position: relative;
     cursor: pointer;
   }
-  .progress-bar::before {
+  /* .progress-bar::before {
     content: '';
     position: absolute;
     left: 0; top: 0; bottom: 0;
@@ -633,7 +637,7 @@
     transition: opacity 0.2s;
     box-shadow: 0 0 8px var(--accent);
   }
-  .progress-bar:hover::after { opacity: 1; }
+  .progress-bar:hover::after { opacity: 1; } */
 
   /* Right controls */
   .player-right {
@@ -643,23 +647,28 @@
     min-width: 160px;
     justify-content: flex-end;
   }
-  .vol-bar {
-    width: 80px; height: 3px;
-    background: var(--bg-card-hover);
-    border-radius: 3px;
-    cursor: pointer;
-    position: relative;
-  }
-  .vol-bar::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 65%;
-    background: var(--text-secondary);
-    border-radius: 3px;
-    transition: background 0.2s;
-  }
-  .vol-bar:hover::before { background: var(--accent); }
+.vol-bar {
+  width: 80px; height: 3px;
+  background: var(--bg-card-hover);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.vol-bar::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  /* Gunakan variabel --vol-width, default 100% */
+  width: var(--vol-width, 100%); 
+  background: var(--text-secondary);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.vol-bar:hover::before { 
+  background: var(--accent); 
+}
 
   /* ── ANIMATIONS ── */
   @keyframes fade-up {

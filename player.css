@@ -1,0 +1,38 @@
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: visible; /* Penting agar knob ::after tidak terpotong */
+}
+
+/* Penampung warna progress */
+#progress-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0%; /* Diupdate oleh JS */
+    background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+    border-radius: 3px;
+    pointer-events: none; /* Klik tembus ke parent (.progress-bar) */
+}
+
+/* Knob/Bulatan penunjuk */
+#progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -5px; /* Setengah dari width knob */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; height: 12px;
+    background: #fff; /* Atau var(--accent) */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    box-shadow: 0 0 12px var(--accent);
+}
+
+.progress-bar:hover #progress-fill::after {
+    opacity: 1;
+}

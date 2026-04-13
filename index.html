@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qoovy</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="home.css"> 
+<link rel="stylesheet" href="player.css"> 
+
+<!-- SCRIPT -->
+<script src="core.js" defer></script>
+
+
 </head>
 <body>
 
@@ -49,12 +55,18 @@
       Settings
     </a>
 
+    <input type="file" id="folderPicker" webkitdirectory directory multiple style="display: none;">
+    <a class="nav-item" href="#" id="loadFolderBtn">
+      <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+      Load Music Folder
+    </a>
+
     <div class="sidebar-footer">
       <div class="user-pill">
         <div class="user-avatar">QV</div>
         <div class="user-info">
           <div class="name">Qoovy User</div>
-          <div class="plan">Developer</div>
+          <div class="plan">Qabil Platform</div>
         </div>
       </div>
     </div>
@@ -84,7 +96,7 @@
     <!-- SCROLL AREA -->
     <div class="scroll-area">
 
-      <!-- HERO -->
+      <!-- MY FAVORITE MUSIC -->
       <div class="hero">
         <div class="hero-art">
           <div class="spin-bars">
@@ -92,8 +104,8 @@
           </div>
         </div>
         <div class="hero-info">
-          <div class="hero-tag">Now Trending</div>
-          <div class="hero-title">Midnight Reverie</div>
+          <div class="hero-tag">My Favorite</div>
+          <div class="hero-title">???</div>
           <div class="hero-subtitle">Your curated evening session is ready</div>
           <button class="hero-btn">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -111,43 +123,17 @@
         <div class="card-grid">
           <div class="card">
             <div class="cover cover-1">
-              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              <!-- CUKUP WARNA DARI COVER SAJA -->
             </div>
             <div class="card-title">Golden Hour</div>
             <div class="card-artist">JVKE</div>
           </div>
           <div class="card">
             <div class="cover cover-2">
-              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            
             </div>
             <div class="card-title">Blinding Lights</div>
             <div class="card-artist">The Weeknd</div>
-          </div>
-          <div class="card">
-            <div class="cover cover-3">
-              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-            </div>
-            <div class="card-title">Levitating</div>
-            <div class="card-artist">Dua Lipa</div>
-          </div>
-          <div class="card">
-            <div class="cover cover-4">
-              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-            </div>
-            <div class="card-title">Starboy</div>
-            <div class="card-artist">The Weeknd</div>
-          </div>
-          <div class="card">
-            <div class="cover cover-5">
-              <div class="cover-glyph"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-              <div class="card-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-            </div>
-            <div class="card-title">As It Was</div>
-            <div class="card-artist">Harry Styles</div>
           </div>
         </div>
       </div>
@@ -281,23 +267,23 @@
       </button>
     </div>
     <div class="progress-row">
-      <span class="progress-time">1:26</span>
-      <div class="progress-bar"></div>
-      <span class="progress-time" style="text-align:right">3:48</span>
+    <span class="progress-time" id="current-time">0:00</span>
+    <div class="progress-bar" id="progress-container">
+        <div id="progress-fill"></div> 
     </div>
+    <span class="progress-time" id="duration-time" style="text-align:right">0:00</span>
+</div>
   </div>
 
   <!-- Right -->
   <div class="player-right">
-    <button class="ctrl-btn">
-      <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
-    </button>
-    <div class="vol-bar"></div>
-    <button class="ctrl-btn">
-      <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-    </button>
+  <button class="ctrl-btn" id="mute-btn">
+    <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+  </button>
+  <div class="vol-bar" id="vol-container">
+    <div id="vol-fill"></div>
+  </div>
   </div>
 </div>
-
 </body>
 </html>
