@@ -679,3 +679,51 @@
   .section:nth-child(1) { animation: fade-up 0.6s 0.1s var(--transition) both; }
   .section:nth-child(2) { animation: fade-up 0.6s 0.2s var(--transition) both; }
   .section:nth-child(3) { animation: fade-up 0.6s 0.3s var(--transition) both; }
+
+
+  /* NEXT BTN */
+  .track-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+    position: relative;
+}
+
+.track-add-queue {
+    margin-left: auto;
+    margin-right: 15px;
+    opacity: 0;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.track-item:hover .track-add-queue {
+    opacity: 1;
+}
+
+.track-add-queue:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    transform: scale(1.2);
+}
+
+/* ADETAIL NTRIAN CSS */
+
+.player-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+#queue-btn svg {
+    transition: color 0.2s;
+}
+
+#queue-btn:hover svg {
+    color: #a855f7;
+}
